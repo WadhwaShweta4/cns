@@ -1,0 +1,28 @@
+AES
+
+generate kiya sab 
+iv ko v mein dala 
+iv ko cal XoR ke 1st box mein dala 
+2nd box mein 1st like of plain text dala 
+calculate zor 
+ans ko plain text mein dala step 3 mein 
+key mein key dala 
+and encrypt kiya 
+cipher text append kiya v mein and usko phirse 
+cal xor mein 1st box(jdr pehle iv dala tha) udr daal diya 
+then again 2nd box mein input 2 (ie the second line ) 
+then calculate xor 
+then that xor in place of plain text 
+and key remains same no changes 
+then encrypt and repeat the same process until the end of input 
+
+DES
+plain text 
+key A 
+encrypt 
+output in plain text 
+key B decrypt 
+and in plain text 
+key A
+ encrypt 
+output put in part 3 in check ans column and click on check ans
