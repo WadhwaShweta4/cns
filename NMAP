@@ -1,0 +1,27 @@
+
+#Scan port 80 on the target system
+nmap –p 80 192.168.0.1
+
+#OS finger printing Nmap can detect the operating system running on the target
+nmap -O <target-ip>
+
+#Ping Scan To perform a ping scan (just to check which hosts are up):
+nmap -sn 192.168.1.0/24
+
+#Scan ports 1 through 200 on the target system
+nmap –p 1-200 192.168.0.1
+
+#Scan (Fast) the most common ports
+nmap –F 192.168.0.1
+
+#To scan all ports (1 – 65535)
+nmap –p– 192.168.0.1
+
+#To scan using TCP connect (it takes longer, but is more likely to connect):
+nmap –sT 192.168.0.1
+
+#To instruct Nmap to scan UDP ports instead of TCP ports (the –p switch specifies ports 80, 130, and 255 in this example):
+nmap –sU 192.168.0.1
+
+#The nmap utility can be used to detect the operating system of a particular target:
+nmap –A 192.168.0.1
