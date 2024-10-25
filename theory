@@ -1,0 +1,157 @@
+1.What filters would you use to capture only HTTP or DNS traffic?
+2.What is packet capturing in Wireshark?
+3.  Which file formats does Wireshark use to save captured packets?  
+4.What information is displayed in the packet list pane?
+5.What is the significance of the Time, Source, Destination, and Protocol columns in Wireshark?
+6.How can Wireshark be used to detect network attacks or suspicious activities?
+7.Can you explain the difference between a network scanner and a port scanner?
+8.What are some of the main features of Nmap?
+9.How can you perform an OS detection scan using Nmap?
+10.What is the purpose of using the -T option in Nmap? Can you explain different timing templates?
+11.What is the difference between a TCP Connect scan (-sT) and a SYN scan (-sS)?
+12. Which are different options/commands in Nmap?
+Ans:
+Filters for HTTP or DNS traffic:
+To capture only HTTP traffic, use http as a filter. For DNS traffic, use dns as a filter in Wireshark.
+
+Packet capturing in Wireshark:
+Packet capturing in Wireshark means recording data packets that travel across a network to analyze traffic and identify issues.
+
+Wireshark file formats:
+Wireshark saves captured packets in formats like .pcap, .pcapng, .cap, and .txt.
+
+Packet list pane information:
+The packet list pane displays information like the packet number, time, source and destination IP addresses, protocol, and additional details about each packet.
+
+Significance of Time, Source, Destination, and Protocol:
+
+Time: When the packet was captured.
+Source: The IP address sending the packet.
+Destination: The IP address receiving the packet.
+Protocol: The communication protocol used (e.g., TCP, UDP, HTTP).
+Using Wireshark for detecting network attacks:
+Wireshark can detect unusual patterns, suspicious IP addresses, repeated failed connections, or unexpected protocols, which might indicate an attack.
+
+Difference between a network scanner and a port scanner:
+A network scanner identifies devices connected to a network, while a port scanner checks which ports on a device are open and potentially vulnerable.
+
+Main features of Nmap:
+Nmap can scan networks, identify open ports, detect services running on those ports, find vulnerabilities, and perform OS detection.
+
+Performing OS detection in Nmap:
+Use the -O option in Nmap to perform OS detection. It examines network responses to determine the operating system running on a target machine.
+
+Purpose of the -T option in Nmap:
+The -T option adjusts the timing of the scan. There are six templates: -T0 (paranoid), -T1 (sneaky), -T2 (polite), -T3 (normal), -T4 (aggressive), and -T5 (insane), each increasing scan speed but reducing stealth.
+
+Difference between TCP Connect scan (-sT) and SYN scan (-sS):
+
+TCP Connect scan (-sT): Fully opens a TCP connection, making it easier to detect but more reliable.
+SYN scan (-sS): Sends a SYN packet and waits for a response without completing the connection, making it stealthier.
+Different Nmap options/commands:
+Common Nmap options include:
+-sS: SYN scan.
+-sT: TCP Connect scan.
+-O: OS detection.
+-p: Specify ports to scan.
+-A: Aggressive scan for additional information.
+-T0 to -T5: Timing templates.
+-v: Verbose mode for more output details.
+
+
+
+
+1. What is the primary weakness of monoalphabetic cipher?
+2. How can you decode a message encrypted with a monoalphabetic cipher without
+knowing the key?
+3. 4. Can a monoalphabetic cipher be used to encode numbers and symbols as well as letters?
+What is substitution table, and how is it used in monoalphabetic cipher
+
+ans:
+Primary weakness of monoalphabetic cipher:
+It’s easy to break using frequency analysis because each letter is always replaced by the same symbol.
+
+Decoding without knowing the key:
+You can decode it by analyzing letter frequency. Common letters like 'E' and 'T' appear often, helping guess the substitutions.
+
+Can it encode numbers and symbols?
+Yes, a monoalphabetic cipher can encode numbers and symbols, not just letters, by creating a substitution for each.
+
+What is a substitution table?
+A substitution table is a chart showing how each letter, number, or symbol is replaced by another. It’s used to encrypt and decrypt messages in a monoalphabetic cipher.
+
+
+1. 2. What is the primary weakness of playfair cipher?
+How does the Playfair cipher differ from simpler substitution ciphers?
+3. Encrypt the <Y our_Name> with playfair cipher using Key “Power”. Explain the steps
+involved in it.Decrypt the encrypted text back to Plain text.
+4. What is a digraph in the context of the Playfair cipher?
+ans:
+Primary weakness of Playfair cipher:
+It’s vulnerable to frequency analysis of digraphs (pairs of letters), and it doesn't hide patterns of repeating letter pairs well.
+
+Difference from simpler substitution ciphers:
+The Playfair cipher encrypts pairs of letters (digraphs) rather than single letters, making it harder to crack with basic frequency analysis.
+
+Encrypt "Your_Name" using the key “Power”:
+Steps:
+
+Create a 5x5 grid with the key "Power" (combine duplicates and add remaining letters of the alphabet, excluding 'J').
+Split "YourName" into pairs: "YO", "UR", "NA", "ME".
+For each pair, apply the Playfair rules:
+If the letters are in the same row, shift right.
+If in the same column, shift down.
+If neither, form a rectangle and swap the corners.
+Encrypt the pairs and decrypt by reversing the process.
+I'll encrypt and decrypt the text for you if you'd like.
+
+What is a digraph in Playfair cipher?
+A digraph is a pair of letters that are encrypted together in the Playfair cipher instead of encrypting individual letters.
+
+
+1. 2. 3. 4. Describe the primary use cases of the RSA algorithm in modern cryptography.
+What are the key steps involved in the RSA algorithm?
+Explain how the modulus nnn is calculated in RSA. Why is it significant?
+Describe a real-world scenario where RSA is used for secure communication.
+ans:
+Primary use cases of the RSA algorithm:
+RSA is mainly used for secure data transmission, digital signatures, and encryption of sensitive information in modern cryptography. It ensures privacy and authenticity, especially in online transactions and email encryption.
+
+Key steps in the RSA algorithm:
+
+Choose two large prime numbers, p and q.
+Calculate n = p * q (the modulus).
+Compute Euler's totient function: φ(n) = (p-1) * (q-1).
+Select a public exponent e such that 1 < e < φ(n) and e is coprime with φ(n).
+Compute the private key d where d * e ≡ 1 (mod φ(n)).
+The public key is (e, n) and the private key is (d, n).
+How is the modulus n calculated in RSA, and why is it significant?
+The modulus n is calculated by multiplying two large prime numbers, p and q. It is significant because it forms part of both the public and private keys, and its size determines the security of the RSA encryption. Larger values of n make it more difficult for attackers to factorize and break the encryption.
+
+Real-world scenario where RSA is used:
+RSA is widely used in securing online transactions. For example, when you connect to a website using HTTPS, RSA can be used to securely exchange encryption keys between your browser and the website's server, ensuring that sensitive data like credit card information is transmitted securely.
+
+
+
+1. Why is HMAC considered more secure than just using a hash function for message
+integrity?
+2. 3. 4. Explain the general structure of an HMAC. How is it calculated?
+What role does the secret key play in the HMAC process?
+Describe the process of key padding in HMAC. Why is it necessar
+ans:
+Why is HMAC more secure than just using a hash function for message integrity?
+HMAC (Hash-based Message Authentication Code) is more secure because it combines a secret key with the message before hashing, ensuring that only someone with the key can verify the integrity. A hash function alone does not provide this additional level of protection against tampering.
+
+General structure of an HMAC and how it's calculated:
+HMAC uses a hash function (like SHA-256) and a secret key. The process is as follows:
+
+Pad the secret key to a fixed length.
+Create two variants: an inner padded key (ipad) and an outer padded key (opad).
+Concatenate the message with ipad, hash the result.
+Concatenate the result with opad, then hash again.
+The final output is the HMAC value.
+Role of the secret key in HMAC:
+The secret key ensures that only parties who know the key can generate or verify the correct HMAC. This key adds security by preventing attackers from modifying the message or generating a valid HMAC without knowing the key.
+
+Process of key padding in HMAC and why it’s necessary:
+Key padding involves extending the secret key to a fixed block size (usually 64 or 128 bytes) by adding extra zero bytes if the key is shorter. If the key is longer than the block size, it’s hashed to fit. Padding is necessary to ensure the key and message can be processed by the hash function efficiently and consistently.
